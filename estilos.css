@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0; 
+}
+.container {
+    width: 100%;
+    height: 800px;
+    background-color: lightyellow;
+}
+.titulo {
+    font-size: 56px;
+    color: #75B79E;
+    display: flex;
+    justify-content: center;
+    background-color: lightyellow;
+    padding: 40px;
+}
+#cardBoard {
+    width: 100%;
+    height: 326px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.memory-card {
+    width: 10%;
+    height: 40%;
+    margin: 34px;  
+    position: relative;
+}
+.verso { 
+    width: 100px;
+    height: 100px;
+    background: #A7E9AF;
+    padding: 24px;
+    border-radius: 10px;
+    position: absolute;
+}
+.frente { 
+    width: 80px;
+    height: 80px;
+    background: #A7E9AF;
+    padding: 33px;
+    border-radius: 10px;
+    position: absolute;
+}
