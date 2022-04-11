@@ -88,7 +88,7 @@ function virar(verso,frente,elemento) {
 
           coincide = coincide + 1;
 
-          
+          setTimeout(checar,2000);
 
           return;
     } 
@@ -121,5 +121,9 @@ function naovirar() {
 
   }, 1000)
 }
-
+function checar() {
+  if ((Number(coincide) * 2 === quantidade)) {
+    alert(`Você ganhou com ${movimentos} movimentos.`);
+}
+}
 jogo();
