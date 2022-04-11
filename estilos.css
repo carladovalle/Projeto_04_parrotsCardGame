@@ -1,47 +1,83 @@
 * {
+    margin: 0;
     padding: 0;
-    margin: 0; 
+    box-sizing: border-box;
 }
-.container {
-    width: 100%;
-    height: 800px;
-    background-color: lightyellow;
+body {
+    background-color: #EEF9BF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.titulo {
+header h1 {
     font-size: 56px;
+    font-weight: 700;
     color: #75B79E;
+    margin-top: 40px;
+    margin-bottom: 47px;
+}
+main {
     display: flex;
     justify-content: center;
-    background-color: lightyellow;
-    padding: 40px;
-}
-#cardBoard {
-    width: 100%;
-    height: 326px;
-    margin: auto;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    margin-left: 122px;
+    margin-right: 88px;
 }
-.memory-card {
-    width: 10%;
-    height: 40%;
-    margin: 34px;  
+.carta {
+    width: 117px;
+    height: 146px;
+    margin-right: 34px;
+    margin-bottom: 34px;
     position: relative;
 }
-.verso { 
+.carta img {
     width: 100px;
     height: 100px;
-    background: #A7E9AF;
-    padding: 24px;
-    border-radius: 10px;
-    position: absolute;
 }
-.frente { 
-    width: 80px;
-    height: 80px;
-    background: #A7E9AF;
-    padding: 33px;
-    border-radius: 10px;
+.face {
+    width: 117px;
+    height: 146px;
+    background-color: #A7E9AF;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+.frente {
+    transform: rotateY(180deg);
+}
+.verso {
+    transform: rotateY(0deg);
+}
+.click_off {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: none;
+}
+.click_on {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    background-color: none;
+    z-index: -1;
+}
+header {
+    position: relative;
+}
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 36px;
+    }
 }
